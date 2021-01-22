@@ -7,5 +7,34 @@
 # Book settings
 title                       : Running with Runpandas  # The title of the book. Will be placed in the left navbar.
 author                      : Marcel Caraciolo  # The author of the book
-copyright                   : "2021"  # Copyright year to be placed in the footer
-logo                        : logo.png  # A path to the book logo
+logo                        : logo.svg  # A path to the book logo
+email                       : marcel@caraciolo.com.br
+
+
+latex:
+  latex_documents:
+    targetname: runningwithrunpandas-book.tex
+
+html:
+  favicon                   : "favicon-16x16.png"  # A path to a favicon image
+  use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
+  use_repository_button     : true  # Whether to add a link to your repository button
+  extra_footer              : Created by <a href="http://www.runpandas.run/">Marcel Caraciolo</a> using <a href="https://jupyterbook.org/">Jupyter Book</a> and supported by Corri por aí.  # Will be displayed underneath the footer.
+  baseurl                   : ""  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+
+  # Information about where the book exists on the web
+repository:
+  url                       : https://github.com/corriporai/runpandasbook # Online location of your book
+
+launch_buttons:
+  colab_url: "https://colab.research.google.com"
+
+parse:
+  myst_extended_syntax: true
+
+sphinx:
+  config:
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+execute:
+  timeout: -1
