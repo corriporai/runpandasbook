@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to your Jupyter Book &#8212; Running with Runpandas</title>
+    <title>Overview &#8212; Running with Runpandas</title>
     
-  <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
 
     
   <link rel="stylesheet"
@@ -31,10 +31,11 @@
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
 
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -45,7 +46,7 @@
     <script src="_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
     <script >
@@ -54,6 +55,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="_static/favicon-16x16.png"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Content in Jupyter Book" href="content.html" />
@@ -75,7 +77,7 @@
         <div class="navbar-brand-box">
 <a class="navbar-brand text-wrap" href="index.html">
   
-  <img src="_static/logo.png" class="logo" alt="logo">
+  <img src="_static/logo.svg" class="logo" alt="logo">
   
   
   <h1 class="site-logo" id="site-title">Running with Runpandas</h1>
@@ -89,7 +91,7 @@
     <ul class="nav sidenav_l1">
  <li class="toctree-l1 current active">
   <a class="reference internal" href="#">
-   Welcome to your Jupyter Book
+   Overview
   </a>
  </li>
 </ul>
@@ -164,6 +166,19 @@
 
         <!-- Source interaction buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/corriporai/runpandasbook"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
 
         <!-- Full screen (wrap in <a> to have style consistency -->
         <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -178,6 +193,40 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#language-choice">
+   Language Choice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#progress-bar">
+   Progress Bar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#citation">
+   Citation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributors">
+   Contributors
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -185,12 +234,57 @@
         
               <div>
                 
-  <div class="section" id="welcome-to-your-jupyter-book">
-<h1>Welcome to your Jupyter Book<a class="headerlink" href="#welcome-to-your-jupyter-book" title="Permalink to this headline">¶</a></h1>
-<p>This is a small sample book to give you a feel for how book content is
-structured.</p>
-<p>Check out the content pages bundled with this sample book to get started.</p>
+  <p><img alt="Picture of art running team" src="_images/running_team.jpg" /></p>
+<div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Running is becoming a quite popular sport around the world. It’s free, requires very little equipment and is simple to get started. Plus, with regular practice, you can improve quickly. Whether you are new to running, have been running for years or are a world-class race, knowing what running metrics to pay attention can be intimidating. As technology improves, it gets more complex, since data that once was only available in a lab setting is now at our fingertips. With advent of GPS-based smartwatches and social running applications such as Strava, MapmyRun and NikePlus Club, more runnners are collecting dozens of activities data, but then not actually using that information or is limited to the features that those apps can offer.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This book is continuously being revised. Found a mistake? <a class="reference external" href="https://github.com/corriporai/runpandasbook/issues">Go here</a>.</p>
+</div>
+<p>In this book, we will take a closer look at what your favorite tracking app or watch is telling you, by exploring the activity data and introduce you to some of the very popular running metrics such as heart rate, cadence, distance, mean speed and to advanced ones such as vertical ratio, power stress and heart rate zones.</p>
+<p>Running metrics are becoming more and more popular, and since you own this data, let this book be a start guide for anyone interested in sports analytics, learning data science concepts and of course start running!</p>
+<div class="section" id="language-choice">
+<h2>Language Choice<a class="headerlink" href="#language-choice" title="Permalink to this headline">¶</a></h2>
+<p>Recent technological advances to GPS-enabled tracking devices is transforming the aspects of training and competition in fitness activities such as running, cycling and swimming. Those devices produces detailed tracking data among several sports data available for anyone interested at its analysis. This enables a descriptive analysis associated with the related data, such as performance, impact of volume of training or just reviewing the historical activities. There are several devices or applications for sports tracking offered by manufacturers of the tracking devices, such as Garmin, Polar, and through a wide range of applications for devices such as smartphones and smartwatches, e.g., Strava, Endomondo, and Runtastic Running GPS Tracker.</p>
+<p>Limiting to range of data science open-source packages available, there is only a handful of packages specific to sport data and their analysis. Within Python ecosystem, one of the most popular programming languages for data science, there is a gap to fill between the collection of tracking data and the analysis of such data. Pandas is a popular package for data analysis, and several specific domain libraries as built on top of it. At my research at time, I didn’t find many sports data analysis package within the Python + Pandas ecosystem.</p>
+<p>As a possible alternative, <code class="docutils literal notranslate"><span class="pre">runpandas</span></code> package comes as a set of utilities to import sports data from GPS-enabled devices or even track activities applications, and, after careful processing, organises them in data frames which can provide information about the units of measurement (e.g. distance and speed units) as well of any data operations that have been carried out (e.g., personal best records, heart efforts, elevation gain).</p>
+<p>In this book, I use <code class="docutils literal notranslate"><span class="pre">runpandas</span></code> with <code class="docutils literal notranslate"><span class="pre">pandas</span></code> data analysis package to dive in into our running activities data, explore some running metrics and learn more about the data behind them and what they are really telling us about our running.</p>
+</div>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<div class="tableofcontents-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="content.html">Content in Jupyter Book</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="progress-bar">
+<h2>Progress Bar<a class="headerlink" href="#progress-bar" title="Permalink to this headline">¶</a></h2>
+<p>Chapter Goal: 18</p>
+<p>To come:</p>
+<p>1…</p>
+<div class="wh-wrapper">
+    <div class="wh-progress-bar">
+        <span class="wh-progress-bar-fill" style="width: 1%;"> 1% </span>
+    </div>
+</div>
+</div>
+<div class="section" id="citation">
+<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<p>Please cite as</p>
+<blockquote>
+<div><p>Caraciolo, Marcel P. <em>Running with Runpandas</em>. 2021.</p>
+</div></blockquote>
+</div>
+<div class="section" id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
+<p>Thank you to contributions:</p>
+<ol class="simple">
+<li><p>Dyego Carlos</p></li>
+</ol>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
@@ -231,7 +325,10 @@ structured.</p>
         
           By Marcel Caraciolo<br/>
         
-            &copy; Copyright 2021.<br/>
+            &copy; Copyright 2020.<br/>
+          <div class="extra_footer">
+            Created by <a href="http://www.runpandas.run/">Marcel Caraciolo</a> using <a href="https://jupyterbook.org/">Jupyter Book</a> and supported by Corri por aí.
+          </div>
       </p>
     </div>
   </footer>
@@ -242,7 +339,7 @@ structured.</p>
     </div>
 
     
-  <script src="_static/js/index.3da636dd464baa7582d2.js"></script>
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
 
 
     
