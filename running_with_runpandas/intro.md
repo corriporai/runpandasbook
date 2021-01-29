@@ -28,11 +28,21 @@ In this book, I use `runpandas` with `pandas` data analysis package to dive in i
 
 ## Progress Bar
 
-Chapter Goal: 18
+Chapter Goal: 11
 
 To come:
 
-1...
+1. Introduction to Python and Pandas
+2. Knowing the tracking file formats
+3. Performance in running
+4. Fetching data from social apps
+5. Advanced topics on running sensors
+6. Running races data analysis
+7. Running races analysis: São Silvestre and Boston Marathon
+8. Swimming and bike
+9. Machine Learning with running
+10. Building your routes
+11. Next steps
 
 <div class="wh-wrapper">
     <div class="wh-progress-bar">
